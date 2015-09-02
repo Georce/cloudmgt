@@ -27,3 +27,6 @@ case $? in
         exit 12
     ;;
 esac
+
+service cloudstack-management start
+tail -f /var/log/cloudstack/management/catalina.out
