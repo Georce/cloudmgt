@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-PORT=${PORT:3306}
-USER=${USER:root}
+PORT=${PORT:-"3306"}
+USER=${USER:-"root"}
 
 if [ ! -d /var/cloudstack/management/.ssh ]; then
         mknod /dev/loop6 -m0660 b 7 6
